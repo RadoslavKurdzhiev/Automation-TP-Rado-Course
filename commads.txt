@@ -1,0 +1,8 @@
+//git
+git checkout -b 'typescript-intro
+
+
+//typescript
+tsc --version
+tsc --init //create config file
+ts-node index.ts //run file
