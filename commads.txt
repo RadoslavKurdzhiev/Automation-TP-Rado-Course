@@ -1,5 +1,5 @@
 //git
-git checkout -b 'typescript-intro
+git checkout -b "typescript-intro"
 git add .
 git commit -m "add commands"
 
