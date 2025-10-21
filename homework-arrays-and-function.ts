@@ -45,8 +45,8 @@ let fruitsToBeSliced: string[] = [
 	'apple',
 	'banana',
 	'cherry',
-	'date',
-	'elderberry',
+	'orange',
+	'berry',
 ];
 
 let firstThree = fruitsToBeSliced.slice(0, 3);
