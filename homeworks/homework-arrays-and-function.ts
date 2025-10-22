@@ -51,3 +51,63 @@ let fruitsToBeSliced: string[] = [
 
 let firstThree = fruitsToBeSliced.slice(0, 3);
 console.log(firstThree);
+
+// 7. Use the splice method to remove the second and third
+// elements from ['car', 'bike', 'bus', 'train',
+// 'boat'] . Log the result.
+
+let vehicles: string[] = ['car', 'bike', 'bus', 'train', 'boat'];
+vehicles.splice(1, 2);
+console.log(vehicles);
+
+// 8. Write a function named “findLargest” that takes three
+// numbers as parameters and returns the largest of them. Use
+// if/else statement to find the largest number. Log the result.
+
+function findLargest(a: number, b: number, c: number): number {
+	if (a >= b && a >= c) {
+		return a;
+	} else if (b >= a && b >= c) {
+		return b;
+	} else {
+		return c;
+	}
+}
+
+const result = findLargest(42, 17, 68);
+console.log('The largest number is:', result);
+
+// 9. Write a function “convertToCentimeters” which receives
+// parameter “inches” and add default value it and convert to
+// centimeters. Log the result with default parameter and with
+// passed parameter.
+
+function convertToCentimeters(inches: number = 10): number {
+	const centimeters = inches * 2.54;
+	console.log(`${inches} inches is equal to ${centimeters} centimeters.`);
+	return centimeters;
+}
+
+// Call with default parameter
+const defaultResultConvertToCentimeters: number = convertToCentimeters();
+// Call with passed parameter
+const resultConvertToCentimeters: number = convertToCentimeters(25);
+
+console.log(defaultResultConvertToCentimeters);
+console.log(resultConvertToCentimeters);
+
+// 10. Write a function named “calculateArea” that takes a
+// required width parameter and an optional height
+// parameter. If height is not provided, assume the shape is a
+// square.
+
+function calculateArea(width: number, height?: number): number {
+	if (height === undefined) {
+		return width * width;
+	} else {
+		return width * height;
+	}
+}
+
+console.log('Area (square):', calculateArea(5));
+console.log('Area (rectangle):', calculateArea(5, 10));
