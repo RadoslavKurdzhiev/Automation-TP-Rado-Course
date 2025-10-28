@@ -87,6 +87,9 @@ const user: User = {
 	age: 24,
 };
 
+//Cannot assign to 'email' because it is a read-only property.
+//user.email = 'S';
+
 //Combining Interfaces using extends keyword
 interface Transmission {
 	type: string;
@@ -100,3 +103,27 @@ const carTransmission: CarTest = {
 	horsepower: 300,
 	type: 'Automatic',
 };
+
+// exercise sum total price
+interface Product {
+	name: string;
+	price: number;
+	getTotalPrice: (quantity: number) => number;
+}
+
+const phone: Product = {
+	name: 'Nokia',
+	price: 500,
+	getTotalPrice: function (quantity: number) {
+		return quantity * this.price;
+	},
+};
+
+function orderDetails(quantity: number, product: Product) {
+	console.log('Order for:', product.name);
+	console.log('Product quantity', quantity);
+	console.log('Product price', product.price);
+	console.log('Total price is', product.getTotalPrice(quantity));
+}
+
+orderDetails(5, phone);
